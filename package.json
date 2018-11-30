@@ -1,60 +1,50 @@
 {
-  "name": "passport-http-bearer",
-  "version": "1.0.1",
-  "description": "HTTP Bearer authentication strategy for Passport.",
+  "name": "passport-http-bearer-flex",
+  "version": "0.0.2",
+  "description": "HTTP Bearer authentication strategy for Passport, but not only bearer.",
+  "repository": {
+    "url": "https://github.com/bgdsh/passport-http-bearer-multiple.git",
+    "type": "git"
+  },
+  "license": "MIT",
   "keywords": [
     "passport",
     "auth",
-    "authn",
     "authentication",
-    "authz",
     "authorization",
     "http",
     "bearer",
     "token",
-    "oauth"
+    "oauth",
+    "no-bearer"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jaredhanson/passport-http-bearer.git"
-  },
   "bugs": {
     "url": "http://github.com/jaredhanson/passport-http-bearer/issues"
   },
-  "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
-  "main": "./lib",
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  }],
+  "main": "./dist",
   "dependencies": {
-    "passport-strategy": "1.x.x"
+    "passport-strategy": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "1.x.x",
-    "chai": "1.x.x",
-    "chai-passport-strategy": "0.1.x"
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.10",
+    "@types/passport": "^0.4.7",
+    "@types/passport-strategy": "^0.2.35",
+    "chai": "^1.0.0",
+    "chai-passport-strategy": "^0.1.0",
+    "mocha": "^5.2.0",
+    "typescript": "^3.2.1"
   },
   "engines": {
     "node": ">= 0.4.0"
   },
   "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc",
     "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
-  },
-  "testling": {
-    "browsers": [
-      "chrome/latest"
-    ],
-    "harness" : "mocha",
-    "files": [
-      "test/bootstrap/testling.js",
-      "test/*.test.js"
-    ]
   }
 }
