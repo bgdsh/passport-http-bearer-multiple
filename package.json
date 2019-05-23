@@ -1,6 +1,6 @@
 {
   "name": "passport-http-bearer-flex",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "HTTP Bearer authentication strategy for Passport, but not only bearer.",
   "repository": {
     "url": "https://github.com/bgdsh/passport-http-bearer-multiple.git",
@@ -21,10 +21,12 @@
   "bugs": {
     "url": "http://github.com/jaredhanson/passport-http-bearer/issues"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://www.opensource.org/licenses/MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
   "main": "./dist",
   "dependencies": {
     "passport-strategy": "^1.0.0"
