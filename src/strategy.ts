@@ -43,10 +43,8 @@ export class Strategy<T> extends strategy.Strategy {
       if (parts.length == 2) {
         const scheme = parts[0];
         const credentials = parts[1];
-        if (/^Bearer$/i.test(scheme)) {
-          token.scheme = "bearer";
-          token.token = credentials;
-        }
+        token.scheme = scheme.toLowerCase();
+        token.token = credentials;
       } else {
         token.token = req.headers.authorization;
       }

@@ -1,6 +1,6 @@
 {
   "name": "passport-http-bearer-flex",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "HTTP Bearer authentication strategy for Passport, but not only bearer.",
   "repository": {
     "url": "https://github.com/bgdsh/passport-http-bearer-multiple.git",
